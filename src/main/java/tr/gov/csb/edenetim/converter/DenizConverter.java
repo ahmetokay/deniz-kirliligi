@@ -44,7 +44,6 @@ public class DenizConverter  extends AbstractBaseConverter<DenizModel, Deniz> {
         dto.setIptalAciklama(entity.getIptalAciklama());
         dto.setYapilanIslem(entity.getYapilanIslem());
         dto.setCezaTutar(entity.getCezaTutar());
-//        dto.setTutanak(entity.getTutanak());
         dto.setTutanakAd(entity.getTutanakAd());
     }
 
@@ -84,7 +83,6 @@ public class DenizConverter  extends AbstractBaseConverter<DenizModel, Deniz> {
         entity.setIptalAciklama(dto.getIptalAciklama());
         entity.setYapilanIslem(dto.getYapilanIslem());
         entity.setCezaTutar(dto.getCezaTutar());
-//        entity.setTutanak(dto.getTutanak());
         entity.setTutanakAd(dto.getTutanakAd());
     }
 }

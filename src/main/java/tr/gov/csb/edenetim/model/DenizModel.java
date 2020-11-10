@@ -43,7 +43,6 @@ public class DenizModel extends BaseModel {
     private String iptalAciklama;
     private String yapilanIslem;
     private Double cezaTutar;
-    private byte[] tutanak;
     private String tutanakAd;
 
     public Integer getActive() {
@@ -316,14 +315,6 @@ public class DenizModel extends BaseModel {
 
     public void setCezaTutar(Double cezaTutar) {
         this.cezaTutar = cezaTutar;
-    }
-
-    public byte[] getTutanak() {
-        return tutanak;
-    }
-
-    public void setTutanak(byte[] tutanak) {
-        this.tutanak = tutanak;
     }
 
     public String getTutanakAd() {
