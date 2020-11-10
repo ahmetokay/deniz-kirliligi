@@ -11,8 +11,6 @@ public interface DenizService {
 
     DenizModel save(DenizModel deniz);
 
-    DenizModel update(DenizModel deniz);
-
     DenizModel get(Long id);
 
     boolean delete(Long id);

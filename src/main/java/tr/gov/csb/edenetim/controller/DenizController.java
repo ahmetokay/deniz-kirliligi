@@ -27,11 +27,6 @@ public class DenizController {
         return new ResponseEntity<>(denizService.save(model), HttpStatus.OK);
     }
 
-    @RequestMapping(path = "/update", method = RequestMethod.POST)
-    public ResponseEntity<DenizModel> update(@RequestBody DenizModel model) {
-        return new ResponseEntity<>(denizService.update(model), HttpStatus.OK);
-    }
-
     @RequestMapping(path = "/get", method = RequestMethod.GET)
     public ResponseEntity<DenizModel> get(@RequestParam("id") Long id) {
         return new ResponseEntity<>(denizService.get(id), HttpStatus.OK);

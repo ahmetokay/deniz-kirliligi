@@ -29,12 +29,16 @@ public class DenizServiceImpl implements DenizService {
 
     @Override
     public DenizModel save(DenizModel deniz) {
-        return converter.convertToDto(repository.save(converter.convertToEntity(deniz)));
-    }
-
-    @Override
-    public DenizModel update(DenizModel deniz) {
-        return converter.convertToDto(repository.save(converter.convertToEntity(deniz)));
+        Optional<Deniz> denizOptional = repository.findById(deniz.getId());
+        if (denizOptional.isPresent()) {
+            // guncelle islemi
+            Deniz denizEntity = converter.convertToEntity(deniz);
+            denizEntity.setTutanak(denizOptional.get().getTutanak());
+            return converter.convertToDto(repository.save(denizEntity));
+        } else {
+            // yeni kayit islemi
+            return converter.convertToDto(repository.save(converter.convertToEntity(deniz)));
+        }
     }
 
     @Override
