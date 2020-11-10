@@ -1,7 +1,7 @@
 package tr.gov.csb.edenetim.model;
 
 import tr.gov.csb.edenetim.core.BaseModel;
-import tr.gov.csb.edenetim.enm.DenizDenetimKonuEnum;
+import tr.gov.csb.edenetim.enm.DenetimKonuEnum;
 import tr.gov.csb.edenetim.enm.GemiCinsEnum;
 import tr.gov.csb.edenetim.enm.KirlilikTurEnum;
 
@@ -9,22 +9,22 @@ import java.util.Date;
 
 public class DenizModel extends BaseModel {
 
-    private Long yetki_Devri_UserId;
+    private Integer active;
+    private Date createDate;
+    private Long userId;
     private Date denetimTarihi;
     private String denetimYapanKurum;
     private String denetimYapanBot;
-    private DenizDenetimKonuEnum denetimKonusu;
+    private DenetimKonuEnum denetimKonusu;
     private String gemiAdi;
     private Integer imo;
     private String bandirasi;
     private GemiCinsEnum gemiCinsi;
-    private Double grosTon = 0.0;
+    private Double grosTon;
     private String mevki;
     private Integer ihlalVar;
     private Integer kanunMaddesiId;
     private String ihlal;
-    private Date createDate;
-    private Integer active;
     private Integer ilKodu;
     private String sahipUnvan;
     private String sahipAdres;
@@ -42,16 +42,32 @@ public class DenizModel extends BaseModel {
     private String cezaIptal;
     private String iptalAciklama;
     private String yapilanIslem;
-    private Double cezaTutar = 0.0;
+    private Double cezaTutar;
     private byte[] tutanak;
     private String tutanakAd;
 
-    public Long getYetki_Devri_UserId() {
-        return yetki_Devri_UserId;
+    public Integer getActive() {
+        return active;
     }
 
-    public void setYetki_Devri_UserId(Long yetki_Devri_UserId) {
-        this.yetki_Devri_UserId = yetki_Devri_UserId;
+    public void setActive(Integer active) {
+        this.active = active;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public Date getDenetimTarihi() {
@@ -78,11 +94,11 @@ public class DenizModel extends BaseModel {
         this.denetimYapanBot = denetimYapanBot;
     }
 
-    public DenizDenetimKonuEnum getDenetimKonusu() {
+    public DenetimKonuEnum getDenetimKonusu() {
         return denetimKonusu;
     }
 
-    public void setDenetimKonusu(DenizDenetimKonuEnum denetimKonusu) {
+    public void setDenetimKonusu(DenetimKonuEnum denetimKonusu) {
         this.denetimKonusu = denetimKonusu;
     }
 
@@ -156,22 +172,6 @@ public class DenizModel extends BaseModel {
 
     public void setIhlal(String ihlal) {
         this.ihlal = ihlal;
-    }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    public Integer getActive() {
-        return active;
-    }
-
-    public void setActive(Integer active) {
-        this.active = active;
     }
 
     public Integer getIlKodu() {

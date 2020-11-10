@@ -1,49 +1,50 @@
 package tr.gov.csb.edenetim.enm;
 
+import java.util.stream.Stream;
+
 public enum GemiCinsEnum {
 
     TICARI_GEMI_YAT(1, "Ticari Gemi/Yat"),
-    OZEL_YAT_TEKNE(2, "Özel Yat/Tekne"),
-    BALIKCI_TEKNESI(3, "Balýkçý Teknesi"),
+    OZEL_YAT_TEKNE(2, "Ozel Yat/Tekne"),
+    BALIKCI_TEKNESI(3, "Balikci Teknesi"),
     GEZI_TEKNESI(4, "Gezi Teknesi"),
-    KURU_YUK_GEMISI(5, "Kuru Yük Gemisi"),
+    KURU_YUK_GEMISI(5, "Kuru Yuk Gemisi"),
     SERVIS_MOTORU(6, "Servis Motoru"),
     KARGO(7, "Kargo"),
     YOLCU_MOTORU(8, "Yolcu Motoru"),
-
-    ACIK_DENIZ_FAALIYETLERI_DESTEK_GEMISI(9, "Açýk Deniz Faaliyetleri Destek Gemisi"),
-    ARABA_TASIYICI_GEMI(10, "Araba Taþýyýcý Gemi"),
-    ATIK_TOPLAMA_GEMISI(11, "Atýk Toplama Gemisi"),
-    BALIK_AVLAMA_GEMISI(12, "Balýk Avlama Gemisi"),
-    BALIKCI_GEMILERI(13, "Balýkçý Gemileri"),
-    BALIKCILIK_YARDIMCI_GEMISI(14, "Balýkçýlýk Yardýmcý Gemisi"),
-    BORU_DOSEME_GEMISI(15, "Boru Döþeme Gemisi"),
-    CANLI_HAYVAN_TASIYICI_GEMI(16, "Canlý Hayvan Taþýyýcý Gemi"),
-    CAMUR_GEMISI(17, "Çamur Gemisi"),
-    CIMENTO_TASIYICI_GEMI(18, "Çimento Taþýyýcý Gemi"),
-    DALGIC_GEMISI(19, "Dalgýç Gemisi"),
-    DIGER_KARGO_GEMISI(20, "Diðer Kargo Gemisi"),
-    DOKME_YUK_GEMISI(21, "Dökme Yük Gemisi"),
-    FRIGORIFIK(22, "Frigorifik(Soðutma Depolu) Yük Gemisi"),
-    GENEL_YUK_GEMILERI(23, "Genel Yük (Karýþýk Yük) Gemileri"),
-    GEZINTI_GEMISI(24, "Gezinti (Tenezzüh) Gemisi"),
+    ACIK_DENIZ_FAALIYETLERI_DESTEK_GEMISI(9, "Acik Deniz Faaliyetleri Destek Gemisi"),
+    ARABA_TASIYICI_GEMI(10, "Araba Tasiyici Gemi"),
+    ATIK_TOPLAMA_GEMISI(11, "Atik Toplama Gemisi"),
+    BALIK_AVLAMA_GEMISI(12, "Balik Avlama Gemisi"),
+    BALIKCI_GEMILERI(13, "Balikci Gemileri"),
+    BALIKCILIK_YARDIMCI_GEMISI(14, "Balikcilik Yardimci Gemisi"),
+    BORU_DOSEME_GEMISI(15, "Boru Doseme Gemisi"),
+    CANLI_HAYVAN_TASIYICI_GEMI(16, "Canli Hayvan Tasiyici Gemi"),
+    CAMUR_GEMISI(17, "Camur Gemisi"),
+    CIMENTO_TASIYICI_GEMI(18, "Cimento Tasiyici Gemi"),
+    DALGIC_GEMISI(19, "Dalgic Gemisi"),
+    DIGER_KARGO_GEMISI(20, "Diger Kargo Gemisi"),
+    DOKME_YUK_GEMISI(21, "Dokme Yuk Gemisi"),
+    FRIGORIFIK(22, "Frigorifik(Sogutma Depolu) Yuk Gemisi"),
+    GENEL_YUK_GEMILERI(23, "Genel Yuk (Karisik Yuk) Gemileri"),
+    GEZINTI_GEMISI(24, "Gezinti (Tenezzuh) Gemisi"),
     KIMYASAL_TANKER(25, "Kimyasal Tanker"),
     KONTEYNER(26, "Konteyner"),
-    OZEL_AMACLI_GEMILER(27, "Özel Amaçlý Gemiler"),
-    OZEL_SURAT_TEKNESI(28, "Özel Sürat Teknesi"),
-    OZEL_TEKNE(29, "Özel Tekne"),
-    OZEL_YAT(30, "Özel Yat (Boyu 24 metre üzeri)"),
+    OZEL_AMACLI_GEMILER(27, "Ozel Amacli Gemiler"),
+    OZEL_SURAT_TEKNESI(28, "Ozel Surat Teknesi"),
+    OZEL_TEKNE(29, "Ozel Tekne"),
+    OZEL_YAT(30, "Ozel Yat (Boyu 24 metre uzeri)"),
     PETROL_TANKERI(31, "Petrol Tankeri"),
     RO_RO(32, "Ro-Ro"),
-    TANKER_SEKLINDEKI_BARCLAR(33, "Tanker Þeklindeki Barçlar"),
-    TICARI_SURAT_TEKNESI(34, "Ticari Sürat Teknesi"),
+    TANKER_SEKLINDEKI_BARCLAR(33, "Tanker seklindeki Barclar"),
+    TICARI_SURAT_TEKNESI(34, "Ticari Surat Teknesi"),
     TICARI_YAT(35, "Ticari Yat"),
     YATLAR(36, "Yatlar"),
     YOLCU_GEMILERI(37, "Yolcu Gemileri"),
     YOLCU_GEMISI(38, "Yolcu Gemisi"),
-    YUK_GEMISI(39, "Yük Gemisi"),
-    YUK_KONTEYNIR_GEMISI(40, "Yük / Konteyner Gemisi"),
-    DIGER(41, "Diðer");
+    YUK_GEMISI(39, "Yuk Gemisi"),
+    YUK_KONTEYNIR_GEMISI(40, "Yuk / Konteyner Gemisi"),
+    DIGER(41, "Diger");
 
     private int code;
     private String label;
@@ -53,15 +54,20 @@ public enum GemiCinsEnum {
         this.label = label;
     }
 
-    public static GemiCinsEnum findByCode(Integer key) {
-        GemiCinsEnum[] values = GemiCinsEnum.values();
-        for (int i = 0; i < values.length; i++) {
-            if (values[i].code == key) {
-                return values[i];
-            }
+    public static int valueOf(GemiCinsEnum value) {
+        for (GemiCinsEnum r : GemiCinsEnum.values()) {
+            if (r == value)
+                return r.getCode();
         }
 
-        return null;
+        throw new IllegalArgumentException(value + " not supported.");
+    }
+
+    public static GemiCinsEnum of(int code) {
+        return Stream.of(GemiCinsEnum.values())
+                .filter(p -> p.getCode() == code)
+                .findFirst()
+                .orElseThrow(IllegalArgumentException::new);
     }
 
     public int code() {
